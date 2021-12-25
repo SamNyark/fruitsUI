@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                      decoration: InputDecoration(
                        hintText: "search",
                        prefixIcon: Icon(Icons.search, color: Colors.grey,),
-                       contentPadding: EdgeInsets.symmetric(horizontal: 5,vertical: 5),
+                       contentPadding: EdgeInsets.symmetric(horizontal: 5,vertical: 7),
                        border: InputBorder.none,
     
                      ),
@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
               const Padding(
                 padding: EdgeInsets.only(left: 15, top: 10),
                 child: Text("All Fruits", style: TextStyle(
-                  fontSize: 22
+                  fontSize: 25
                 ),),),
                  const Padding(
                   padding:  EdgeInsets.all(8.0),
@@ -64,8 +64,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                     
                   ),
                 ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height - 300,
+                Container(
+                  height: 400,
                   child: const TabBarView(children: [
                       TabPage(),
                       TabPage(),
