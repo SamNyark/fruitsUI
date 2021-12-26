@@ -43,9 +43,9 @@ Widget _buildCard(price, String imagePath, String description, color){
         const SizedBox(height: 20,),
         InkWell(
           onTap: (){},
-          child: Container(padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 10),
+          child: Container(padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
             height: 40,
-            width: 140,
+            width: 145,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25),
               color: Colors.grey.withOpacity(0.5)
