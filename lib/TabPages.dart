@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:new_beginning/components/products.dart';
 
 class TabPage extends StatefulWidget {
   const TabPage({ Key? key }) : super(key: key);
@@ -13,8 +14,10 @@ class _TabPageState extends State<TabPage> {
     return ListView(
       scrollDirection: Axis.horizontal,
       children: [
-        _buildCard("\$45", "assets/images/Avocado.jpg", "hfudhfihsdf  dsfhfhoidsi ffdfdsf", 0xFF34EB49),
-        _buildCard("\$45", "assets/images/Avocado.jpg", "hfudhfihsdf  dsfhfhoidsi ffdfdsf", 0xFF34EB49)
+        _buildCard(allFruits[0].price, allFruits[0].image, allFruits[0].description, allFruits[0].color),
+        _buildCard(allFruits[1].price, allFruits[1].image, allFruits[1].description, allFruits[1].color),
+        _buildCard(allFruits[2].price, allFruits[2].image, allFruits[2].description, allFruits[2].color),
+        _buildCard(allFruits[3].price, allFruits[3].image, allFruits[3].description, allFruits[3].color),
 
       ],
       
@@ -33,13 +36,17 @@ Widget _buildCard(price, String imagePath, String description, color){
     ),
     child: Column(
       children: [
+        const SizedBox(height: 10,),
         Image.asset(imagePath,
         height: 150,
         fit: BoxFit.cover,),
         const SizedBox(height: 15,),
         Text(price, style: const TextStyle(fontSize: 30),),
         const SizedBox(height: 15,),
-        Text(description, style: const TextStyle(fontSize: 16),),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+          child: Text(description, style: const TextStyle(fontSize: 16),),
+        ),
         const SizedBox(height: 20,),
         InkWell(
           onTap: (){},
@@ -48,7 +55,7 @@ Widget _buildCard(price, String imagePath, String description, color){
             width: 145,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25),
-              color: Colors.grey.withOpacity(0.5)
+              color: Colors.grey
             ),
             child: const Text("Add to Cart", style: TextStyle(fontSize: 16),),
           ),
